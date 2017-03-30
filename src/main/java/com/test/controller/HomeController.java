@@ -7,6 +7,7 @@ import java.util.Date;
 import java.util.LinkedList;
 import java.util.Locale;
 
+import org.apache.commons.logging.Log;
 import org.exolab.castor.xml.MarshalException;
 import org.exolab.castor.xml.Unmarshaller;
 import org.exolab.castor.xml.ValidationException;
@@ -71,6 +72,8 @@ public class HomeController {
 		return articles;
 
 	}
+	
+	//Read from extension. i.e 
 	@SuppressWarnings("unchecked")
 	@RequestMapping(value = "/json", method = RequestMethod.GET)
 	public LinkedList<Article> json(Model model) {
@@ -92,6 +95,7 @@ public class HomeController {
 			
 		} catch (FileNotFoundException e) {
 			System.out.println(e.getMessage());
+			
 			e.printStackTrace();
 		} catch (MarshalException e) {
 			e.printStackTrace();
@@ -102,4 +106,12 @@ public class HomeController {
 		return articles;
 
 	}
+	
+/*	@RequestMapping(value="/angular", method = RequestMethod.GET)
+	public String getString()
+	{
+		return "angularpage";
+	}*/
+	
+	
 }
