@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<title>First Angular App</title>
+<script type="text/javascript" src="../resources/static/js/app.js"></script>
+<!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script> -->
+<script type="text/javascript" src="resources/static/js/angular.min.js"></script>
+<link rel="stylesheet" type="text/css" href="resources/static/css/bootstrap.min.css"/>
+</head>
+<body ng-controller="DashboardCtrl">S
+	<header>
+		<div class="container">
+			<nav>
+				<ul>
+					<li><a href="#angularpage">AngularPage</a></li>
+					<li><a href="#reports">Reports</a></li>
+					<li><a href="#manage">Manage</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<section id="content">
+		<div class="container">
+			<div ng-view=""></div>
+		</div>
+	</section>
+	<footer>
+		<div class="container">
+			<p>Copyright &copy; 2015. All rights reserved.</p>
+		</div>
+	</footer>
+</body>
+</html>
